@@ -16,4 +16,5 @@
 /data
 /notebooks/__pycache__
 /output
+*.pdf
 
