@@ -2,11 +2,15 @@ import pandas as pd
 import os
 from dotenv import load_dotenv
 from psycopg import connect
+from prefect import task
+
 
 # Load environment variables
 load_dotenv()
 
+@task
 def fetch_data():
+  
     # get url
     db_url = os.getenv("DATABASE_URL")
 
@@ -44,3 +48,4 @@ def fetch_data():
     orders_data = pd.read_sql(query, conn)
     orders_data.to_csv("../outputs/orders_data.csv", index=False)
     print("Data exported to CSV files successfully.")
+    return customers_data, orders_data

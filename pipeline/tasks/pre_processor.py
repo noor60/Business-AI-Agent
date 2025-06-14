@@ -1,8 +1,8 @@
 import pandas as pd
 import ast
+from prefect import task
 
-
-
+@task
 def data_pre_processing():
     customer_data = pd.read_csv("../outputs/customers_data.csv")
     orders = pd.read_csv("../outputs/orders_data.csv")
