@@ -19,3 +19,6 @@
 *.pdf
 /business ai engine.code-workspace
 README.md
+pipeline/tasks/__pycache__/data_fetch.cpython-312.pyc
+pipeline/tasks/__pycache__/pre_processor.cpython-312.pyc
+*.pyc
